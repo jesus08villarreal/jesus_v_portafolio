@@ -3,40 +3,7 @@
 import { motion } from 'framer-motion'
 import ProjectCard from './ProjectCard'
 import { useTranslations } from '../hooks/useTranslations'
-
-const projects = [
-  {
-    title: 'Portfolio Website',
-    description: 'Modern portfolio website built with Next.js, TypeScript, and TailwindCSS.',
-    image: '/projects/portfolio.jpg',
-    technologies: ['Next.js', 'TypeScript', 'TailwindCSS', 'Framer Motion'],
-    github: 'https://github.com/jesus08villarreal/portfolio',
-    link: 'https://jesus-villarreal.vercel.app'
-  },
-  {
-    title: 'E-commerce Platform',
-    description: 'Full-stack e-commerce platform with advanced features and secure payment processing.',
-    image: '/projects/ecommerce.jpg',
-    technologies: ['Vue.js', 'Python', 'FastAPI', 'PostgreSQL'],
-    github: 'https://github.com/jesus08villarreal/ecommerce',
-  },
-  {
-    title: 'Task Management System',
-    description: 'Comprehensive task management system with real-time updates and team collaboration.',
-    image: '/projects/tasks.jpg',
-    technologies: ['Angular', 'Node.js', 'MongoDB', 'Socket.io'],
-    github: 'https://github.com/jesus08villarreal/task-manager',
-    link: 'https://tasks.jesus-villarreal.com'
-  },
-  {
-    title: 'Weather Dashboard',
-    description: 'Real-time weather dashboard with location-based forecasts and interactive maps.',
-    image: '/projects/weather.jpg',
-    technologies: ['React', 'OpenWeather API', 'Mapbox', 'TailwindCSS'],
-    github: 'https://github.com/jesus08villarreal/weather-app',
-    link: 'https://weather.jesus-villarreal.com'
-  }
-]
+import { projects } from '../config/projects'
 
 const container = {
   hidden: { opacity: 0 },

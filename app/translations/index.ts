@@ -26,21 +26,34 @@ export const translations = {
         title: 'Software Engineer',
         company: 'BSD Enterprise',
         period: 'Current',
-        description: 'Development of user interfaces using Angular 17, TypeScript, and Bootstrap for the frontend, ensuring an intuitive, efficient user experience with responsive design.',
+        description: 'Full-stack development and project leadership, focusing on HR systems and route tracking using modern technologies.',
         details: [
-          'Development of user interfaces with Angular 17, TypeScript and Bootstrap',
-          'Implementation of serverless solutions with AWS Lambda and DynamoDB',
-          'Development of scalable and highly available web applications',
+          'Project leadership in requirements analysis and task assignment',
+          'Full-stack development with TypeScript and AWS services',
+          'Implementation of HR management systems and route tracking solutions',
+          'Integration with Elasticsearch for Business Intelligence',
         ],
         projects: [
           {
-            name: 'Enterprise Dashboard',
-            description: 'Developed a comprehensive dashboard for enterprise resource management.',
-            technologies: ['Angular 17', 'TypeScript', 'AWS Lambda', 'DynamoDB'],
+            name: 'HR System',
+            description: 'Comprehensive HR management system with multiple modules.',
+            technologies: ['TypeScript', 'AWS Lambda', 'DynamoDB', 'Elasticsearch', 'Angular', 'PrimeNG'],
             achievements: [
-              'Improved system performance by 40%',
-              'Implemented real-time data synchronization',
-              'Reduced loading times by 60%'
+              'Designed and implemented check-in/out system for attendance tracking with DynamoDB',
+              'Automated vacation reports and seniority calculations using Elasticsearch',
+              'Developed permission management modules with real-time updates',
+              'Integrated Business Intelligence dashboards with Elasticsearch analytics'
+            ]
+          },
+          {
+            name: 'Route Tracking System',
+            description: 'Complete migration and modernization of legacy route tracking system.',
+            technologies: ['Python', 'AWS Lambda', 'DynamoDB', 'Elasticsearch', 'Angular', 'PrimeNG'],
+            achievements: [
+              'Migrated legacy Java backend to Python with AWS Lambda and DynamoDB',
+              'Developed interactive frontend modules with Angular and PrimeNG',
+              'Implemented real-time data analysis with Elasticsearch',
+              'Achieved 100% project completion with robust functionality'
             ]
           }
         ]
@@ -49,21 +62,38 @@ export const translations = {
         title: 'Full-Stack Developer',
         company: 'Connect IT',
         period: 'March 2023 - May 2024',
-        description: 'Full-stack development with modern technologies, creating robust and scalable applications.',
+        description: 'Full-stack development focused on POS systems and e-commerce solutions with containerized deployments and CI/CD implementation.',
         details: [
-          'Full-stack development with JavaScript, TypeScript, Angular and Vue',
-          'Creation of RESTful APIs with Python, FastAPI, Flask and PHP',
-          'SQL database management and work with Docker/GitLab',
+          'Development of POS and e-commerce systems',
+          'Backend development with Flask and FastAPI',
+          'Frontend development with Vue 3 and Angular',
+          'Implementation of Docker containers and CI/CD pipelines',
+          'Database management with Azure'
         ],
         projects: [
           {
-            name: 'E-commerce Platform',
-            description: 'Built a modern e-commerce platform with advanced features.',
-            technologies: ['Vue.js', 'Python', 'FastAPI', 'PostgreSQL'],
+            name: 'Point of Sale System',
+            description: 'Comprehensive POS system with multiple business modules and containerized deployment.',
+            technologies: ['Flask', 'Vue 3', 'SQL', 'Azure', 'Docker', 'GitLab CI/CD'],
             achievements: [
-              'Implemented secure payment processing',
-              'Developed inventory management system',
-              'Created automated testing suite'
+              'Developed returns, credits, and partial sales modules',
+              'Implemented sales and debtor reporting systems',
+              'Created stored procedures for efficient data handling',
+              'Containerized application with Docker for consistent deployments',
+              'Implemented automated testing and deployment pipelines with GitLab CI/CD'
+            ]
+          },
+          {
+            name: 'E-commerce Platform',
+            description: 'Modern e-commerce platform with custom reporting and automated deployments.',
+            technologies: ['FastAPI', 'SQLAlchemy', 'Vue 3', 'Azure', 'Docker', 'GitLab CI/CD'],
+            achievements: [
+              'Developed backend with FastAPI and SQLAlchemy',
+              'Managed Azure database configurations and backups',
+              'Created custom reporting modules',
+              'Implemented product management system',
+              'Set up Docker containers for development and production',
+              'Established CI/CD pipelines for automated testing and deployment'
             ]
           }
         ]
@@ -73,19 +103,19 @@ export const translations = {
       title: 'Technical Skills',
       frontend: {
         title: 'Front-end',
-        skills: ['HTML, CSS, JavaScript', 'TypeScript', 'Angular, Vue.js', 'Bootstrap'],
+        skills: ['HTML, CSS, JavaScript', 'TypeScript', 'Angular, Vue.js', 'Bootstrap, PrimeNG'],
       },
       backend: {
         title: 'Back-end',
-        skills: ['Python', 'FastAPI', 'AWS', 'PHP'],
+        skills: ['Python (FastAPI, Flask)', 'AWS Lambda', 'Node.js', 'PHP'],
       },
       database: {
         title: 'Databases',
-        skills: ['MySQL', 'SQLAlchemy', 'DynamoDB'],
+        skills: ['DynamoDB', 'MySQL', 'Elasticsearch', 'SQLAlchemy'],
       },
       tools: {
-        title: 'Tools',
-        skills: ['Docker', 'GitLab', 'CI/CD', 'AWS Cloud'],
+        title: 'Tools & DevOps',
+        skills: ['Docker', 'GitLab CI/CD', 'AWS Cloud', 'Azure', 'Git'],
       },
     },
     projects: {
@@ -130,21 +160,34 @@ export const translations = {
         title: 'Ingeniero de Software',
         company: 'BSD Enterprise',
         period: 'Actual',
-        description: 'Desarrollo de interfaces de usuario utilizando Angular 17, TypeScript y Bootstrap para el frontend, asegurando una experiencia de usuario intuitiva y eficiente con diseño responsive.',
+        description: 'Desarrollo full-stack y liderazgo de proyectos, enfocado en sistemas de RH y seguimiento de rutas usando tecnologías modernas.',
         details: [
-          'Desarrollo de interfaces de usuario con Angular 17, TypeScript y Bootstrap',
-          'Implementación de soluciones serverless con AWS Lambda y DynamoDB',
-          'Desarrollo de aplicaciones web escalables y de alta disponibilidad',
+          'Liderazgo en análisis de requerimientos y asignación de tareas',
+          'Desarrollo full-stack con TypeScript y servicios AWS',
+          'Implementación de sistemas de gestión de RH y seguimiento de rutas',
+          'Integración con Elasticsearch para Business Intelligence'
         ],
         projects: [
           {
-            name: 'Panel de Control Empresarial',
-            description: 'Desarrollo de un panel de control completo para la gestión de recursos empresariales.',
-            technologies: ['Angular 17', 'TypeScript', 'AWS Lambda', 'DynamoDB'],
+            name: 'Sistema RH',
+            description: 'Sistema integral de gestión de recursos humanos con múltiples módulos.',
+            technologies: ['TypeScript', 'AWS Lambda', 'DynamoDB', 'Elasticsearch', 'Angular', 'PrimeNG'],
             achievements: [
-              'Mejora del rendimiento del sistema en un 40%',
-              'Implementación de sincronización de datos en tiempo real',
-              'Reducción de tiempos de carga en un 60%'
+              'Diseño e implementación de sistema de chequeo de entradas/salidas con DynamoDB',
+              'Automatización de reportes de vacaciones y cálculos de antigüedad usando Elasticsearch',
+              'Desarrollo de módulos de gestión de permisos con actualizaciones en tiempo real',
+              'Integración de dashboards de Business Intelligence con análisis de Elasticsearch'
+            ]
+          },
+          {
+            name: 'Sistema de Tracking de Rutas',
+            description: 'Migración completa y modernización de sistema legado de seguimiento de rutas.',
+            technologies: ['Python', 'AWS Lambda', 'DynamoDB', 'Elasticsearch', 'Angular', 'PrimeNG'],
+            achievements: [
+              'Migración de backend legado de Java a Python con AWS Lambda y DynamoDB',
+              'Desarrollo de módulos frontend interactivos con Angular y PrimeNG',
+              'Implementación de análisis de datos en tiempo real con Elasticsearch',
+              'Logro de implementación del proyecto al 100% con funcionalidad robusta'
             ]
           }
         ]
@@ -153,21 +196,38 @@ export const translations = {
         title: 'Desarrollador Full-Stack',
         company: 'Connect IT',
         period: 'Marzo 2023 - Mayo 2024',
-        description: 'Desarrollo full-stack con tecnologías modernas, creando aplicaciones robustas y escalables.',
+        description: 'Desarrollo full-stack enfocado en sistemas de punto de venta y comercio electrónico con despliegues containerizados e implementación de CI/CD.',
         details: [
-          'Desarrollo full-stack con JavaScript, TypeScript, Angular y Vue',
-          'Creación de APIs RESTful con Python, FastAPI, Flask y PHP',
-          'Gestión de bases de datos SQL y trabajo con Docker/GitLab',
+          'Desarrollo de sistemas POS y e-commerce',
+          'Desarrollo backend con Flask y FastAPI',
+          'Desarrollo frontend con Vue 3 y Angular',
+          'Implementación de contenedores Docker y pipelines CI/CD',
+          'Gestión de bases de datos en Azure'
         ],
         projects: [
           {
-            name: 'Plataforma E-commerce',
-            description: 'Construcción de una plataforma moderna de comercio electrónico con características avanzadas.',
-            technologies: ['Vue.js', 'Python', 'FastAPI', 'PostgreSQL'],
+            name: 'Sistema Punto de Venta',
+            description: 'Sistema integral de punto de venta con múltiples módulos de negocio y despliegue containerizado.',
+            technologies: ['Flask', 'Vue 3', 'SQL', 'Azure', 'Docker', 'GitLab CI/CD'],
             achievements: [
-              'Implementación de procesamiento seguro de pagos',
-              'Desarrollo de sistema de gestión de inventario',
-              'Creación de suite de pruebas automatizadas'
+              'Desarrollo de módulos de devoluciones, créditos y ventas parciales',
+              'Implementación de sistemas de reportes de ventas y deudores',
+              'Creación de procedimientos almacenados para manejo eficiente de datos',
+              'Containerización de la aplicación con Docker para despliegues consistentes',
+              'Implementación de pipelines de pruebas y despliegue automatizado con GitLab CI/CD'
+            ]
+          },
+          {
+            name: 'Plataforma E-commerce',
+            description: 'Plataforma moderna de comercio electrónico con reportes personalizados y despliegues automatizados.',
+            technologies: ['FastAPI', 'SQLAlchemy', 'Vue 3', 'Azure', 'Docker', 'GitLab CI/CD'],
+            achievements: [
+              'Desarrollo de backend con FastAPI y SQLAlchemy',
+              'Gestión de configuraciones y respaldos de bases de datos en Azure',
+              'Creación de módulos de reportes personalizados',
+              'Implementación de sistema de gestión de productos',
+              'Configuración de contenedores Docker para desarrollo y producción',
+              'Establecimiento de pipelines CI/CD para pruebas y despliegue automatizado'
             ]
           }
         ]
@@ -177,19 +237,19 @@ export const translations = {
       title: 'Habilidades Técnicas',
       frontend: {
         title: 'Front-end',
-        skills: ['HTML, CSS, JavaScript', 'TypeScript', 'Angular, Vue.js', 'Bootstrap'],
+        skills: ['HTML, CSS, JavaScript', 'TypeScript', 'Angular, Vue.js', 'Bootstrap, PrimeNG'],
       },
       backend: {
         title: 'Back-end',
-        skills: ['Python', 'FastAPI', 'AWS', 'PHP'],
+        skills: ['Python (FastAPI, Flask)', 'AWS Lambda', 'Node.js', 'PHP'],
       },
       database: {
         title: 'Bases de Datos',
-        skills: ['MySQL', 'SQLAlchemy', 'DynamoDB'],
+        skills: ['DynamoDB', 'MySQL', 'Elasticsearch', 'SQLAlchemy'],
       },
       tools: {
-        title: 'Herramientas',
-        skills: ['Docker', 'GitLab', 'CI/CD', 'AWS Cloud'],
+        title: 'Herramientas y DevOps',
+        skills: ['Docker', 'GitLab CI/CD', 'AWS Cloud', 'Azure', 'Git'],
       },
     },
     projects: {

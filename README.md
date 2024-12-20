@@ -1,42 +1,98 @@
-# Portfolio Blog Starter
+# 🚀 Portafolio de Jesús Villarreal
 
-This is a porfolio site template complete with a blog. Includes:
+[![Next.js](https://img.shields.io/badge/Next.js-13-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-Latest-ff69b4?style=for-the-badge&logo=framer)](https://www.framer.com/motion/)
 
-- MDX and Markdown support
-- Optimized for SEO (sitemap, robots, JSON-LD schema)
-- RSS Feed
-- Dynamic OG images
-- Syntax highlighting
-- Tailwind v4
-- Vercel Speed Insights / Web Analytics
-- Geist font
+## 🌟 Características
 
-## Demo
+- ⚡ **Rendimiento Optimizado**: Construido con Next.js 13 para una experiencia de usuario ultrarrápida
+- 🎨 **Diseño Responsivo**: Interfaz adaptable a cualquier dispositivo
+- 🌓 **Modo Oscuro/Claro**: Cambio dinámico de tema para mejor experiencia visual
+- 🌐 **Multilenguaje**: Soporte completo para español e inglés
+- ✨ **Animaciones Suaves**: Implementadas con Framer Motion
+- 📱 **PWA Ready**: Instalable como aplicación progresiva web
+- 🎯 **SEO Optimizado**: Metadata y estructuración optimizada para motores de búsqueda
 
-https://portfolio-blog-starter.vercel.app
+## 🛠️ Tecnologías Utilizadas
 
-## How to Use
+- **Frontend**:
+  - Next.js 13 (App Router)
+  - TypeScript
+  - TailwindCSS
+  - Framer Motion
 
-You can choose from one of the following two methods to use this repository:
+- **Herramientas de Desarrollo**:
+  - ESLint
+  - Prettier
+  - PostCSS
+  - Autoprefixer
 
-### One-Click Deploy
+## 🚀 Características del Portafolio
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+- 📊 Sección de experiencia laboral detallada
+- 💼 Showcase de proyectos con imágenes y enlaces
+- 🛠️ Lista de habilidades técnicas con iconos
+- 📱 Información de contacto y redes sociales
+- 🎨 Diseño moderno y minimalista
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/blog&project-name=blog&repository-name=blog)
+## 🔧 Instalación y Uso
 
-### Clone and Deploy
+1. **Clonar el repositorio**:
+   ```bash
+   git clone https://github.com/jesus08villarreal/jesus_v_portafolio.git
+   cd jesus_v_portafolio
+   ```
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
+2. **Instalar dependencias**:
+   ```bash
+   npm install
+   # o
+   yarn install
+   ```
 
-```bash
-pnpm create next-app --example https://github.com/vercel/examples/tree/main/solutions/blog blog
+3. **Ejecutar en desarrollo**:
+   ```bash
+   npm run dev
+   # o
+   yarn dev
+   ```
+
+4. **Construir para producción**:
+   ```bash
+   npm run build
+   # o
+   yarn build
+   ```
+
+## 📝 Estructura del Proyecto
+
+```
+jesus_v_portafolio/
+├── app/                    # App Router de Next.js
+│   ├── components/         # Componentes reutilizables
+│   ├── config/            # Archivos de configuración
+│   ├── hooks/             # Custom hooks
+│   ├── translations/      # Archivos de traducción
+│   └── page.tsx           # Página principal
+├── public/                # Archivos estáticos
+└── styles/                # Estilos globales
 ```
 
-Then, run Next.js in development mode:
+## 🌐 Demo en Vivo
 
-```bash
-pnpm dev
-```
+Visita el portafolio en [jesusvportafolio.vercel.app](https://jesusvportafolio.vercel.app/)
 
-Deploy it to the cloud with [Vercel](https://vercel.com/templates) ([Documentation](https://nextjs.org/docs/app/building-your-application/deploying)).
+## 📫 Contacto
+
+- LinkedIn: [Jesús Villarreal](https://www.linkedin.com/in/jesus-villarreal-5a5b1b1b0/)
+- Email: jesus08villarreal@gmail.com
+- GitHub: [@jesus08villarreal](https://github.com/jesus08villarreal)
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+
+---
+⭐ Si te gusta este proyecto, ¡no dudes en darle una estrella en GitHub!

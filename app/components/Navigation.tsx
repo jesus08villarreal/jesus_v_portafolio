@@ -29,12 +29,11 @@ export default function Navigation() {
     const element = document.getElementById(targetId);
     if (element) {
       const offsetTop = element.offsetTop;
-      const navHeight = 80; // altura aproximada de la barra de navegación
+      const navHeight = 80;
       window.scrollTo({
         top: offsetTop - navHeight,
         behavior: 'smooth'
       });
-      // Actualizar la URL sin recargar la página
       window.history.pushState({}, '', href);
     }
     setIsMenuOpen(false);
@@ -53,9 +52,9 @@ export default function Navigation() {
 
   return (
     <nav 
-      className={`fixed w-full z-50 transition-all duration-300 backdrop-blur-sm ${
+      className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/80 dark:bg-gray-900/80 shadow-lg py-2' 
+          ? 'bg-white/90 dark:bg-gray-900/90 shadow-lg py-2' 
           : 'bg-transparent py-4'
       }`}
     >
@@ -66,7 +65,7 @@ export default function Navigation() {
             className={`font-bold text-xl transition-colors duration-200 ${
               isScrolled 
                 ? 'text-gray-900 dark:text-white' 
-                : 'text-white'
+                : 'text-gray-900 dark:text-white'
             }`}
           >
             JV
@@ -83,7 +82,7 @@ export default function Navigation() {
                   className={`hover:text-blue-500 transition-colors duration-200 relative group ${
                     isScrolled 
                       ? 'text-gray-700 dark:text-gray-300' 
-                      : 'text-white'
+                      : 'text-gray-900 dark:text-white'
                   }`}
                 >
                   {t.nav[key]}
@@ -98,7 +97,7 @@ export default function Navigation() {
                 className={`p-2 rounded-lg transition-all duration-300 hover:scale-110 ${
                   isScrolled 
                     ? 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700' 
-                    : 'bg-white/10 text-white hover:bg-white/20'
+                    : 'bg-gray-100 dark:bg-white/10 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-white/20'
                 }`}
                 aria-label="Toggle theme"
               >
@@ -123,7 +122,7 @@ export default function Navigation() {
               className={`p-2 rounded-lg transition-all duration-300 ${
                 isScrolled 
                   ? 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white' 
-                  : 'bg-white/10 text-white'
+                  : 'bg-gray-100 dark:bg-white/10 text-gray-900 dark:text-white'
               }`}
               aria-label="Toggle theme"
             >
@@ -142,7 +141,7 @@ export default function Navigation() {
               className={`p-2 rounded-lg transition-colors duration-200 ${
                 isScrolled 
                   ? 'text-gray-900 dark:text-white' 
-                  : 'text-white'
+                  : 'text-gray-900 dark:text-white'
               }`}
               aria-label="Toggle menu"
             >
@@ -164,7 +163,7 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-gray-900 shadow-lg py-4 transition-all duration-300">
+          <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-gray-900 shadow-lg py-4">
             {navigationItems.map(([key, href]) => (
               <a
                 key={key}

@@ -15,14 +15,14 @@ export default function Home() {
   const [selectedCompany, setSelectedCompany] = useState<'bsd' | 'connectit' | null>(null)
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen">
+    <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-black">
       {/* Hero Section */}
-      <section id="hero" className="w-full min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 via-gray-800 to-black dark:from-black dark:via-gray-900 dark:to-gray-800 text-white">
+      <section id="hero" className="w-full min-h-screen flex items-center justify-center">
         <div className="container mx-auto px-4 py-32 md:py-0">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="flex-1 text-center md:text-left space-y-8">
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600"
+                className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-400 dark:to-blue-600"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -30,7 +30,7 @@ export default function Home() {
                 Jesús Villarreal
               </motion.h1>
               <motion.h2 
-                className="text-2xl md:text-3xl text-gray-300"
+                className="text-2xl md:text-3xl text-gray-700 dark:text-gray-300"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
@@ -38,7 +38,7 @@ export default function Home() {
                 {t.hero.title}
               </motion.h2>
               <motion.p
-                className="text-lg text-gray-400 max-w-xl"
+                className="text-lg text-gray-600 dark:text-gray-400 max-w-xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
@@ -53,7 +53,7 @@ export default function Home() {
               >
                 <Link 
                   href="https://github.com/jesus08villarreal" 
-                  className="group bg-white/10 text-white px-8 py-3 rounded-lg hover:bg-white/20 transition-all duration-300 flex items-center gap-2"
+                  className="group bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-white px-8 py-3 rounded-lg hover:bg-gray-200 dark:hover:bg-white/20 transition-all duration-300 flex items-center gap-2"
                   target="_blank"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -63,7 +63,7 @@ export default function Home() {
                 </Link>
                 <Link 
                   href="https://www.linkedin.com/in/jesus-villarreal-191998224/"
-                  className="group bg-blue-600/90 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 flex items-center gap-2"
+                  className="group bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 flex items-center gap-2"
                   target="_blank"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -86,27 +86,65 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="w-full py-24 bg-white dark:bg-gray-900 transition-colors duration-300">
-        <div className="container mx-auto px-4">
+      <section id="about" className="w-full py-32 relative">
+        <div className="absolute inset-0 bg-gray-100/80 dark:bg-black/30" />
+        <div className="container relative mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto space-y-8"
+            className="max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-8">
-              {t.about.title}
-            </h2>
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              {t.about.content}
-            </p>
+            <div className="text-center space-y-4 mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+                {t.about.title}
+              </h2>
+              <div className="w-20 h-1 bg-blue-500 mx-auto rounded-full" />
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="relative group"
+              >
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl opacity-20 group-hover:opacity-30 blur transition duration-300" />
+                <div className="relative h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 border border-gray-200/50 dark:border-white/10">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                    Experiencia Técnica
+                  </h3>
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    Desarrollador Full-stack con experiencia en tecnologías front-end y back-end, incluyendo HTML, CSS, JavaScript, Vue.js, Python y PHP. Especializado en la gestión de bases de datos SQL y despliegues eficientes con Docker y CI/CD.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="relative group"
+              >
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl opacity-20 group-hover:opacity-30 blur transition duration-300" />
+                <div className="relative h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 border border-gray-200/50 dark:border-white/10">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                    Enfoque Profesional
+                  </h3>
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    Como graduado en Ingeniería en Computación Administrativa, busco contribuir a proyectos innovadores con mi enfoque analítico y capacidad de resolución de problemas, siempre manteniendo las mejores prácticas de desarrollo.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="w-full py-24 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
-        <div className="container mx-auto px-4">
+      <section id="experience" className="w-full py-32 relative">
+        <div className="absolute inset-0 bg-gray-200/50 dark:bg-black/40" />
+        <div className="container relative mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-900 dark:text-white">
             {t.experience.title}
           </h2>
@@ -115,7 +153,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-white/80 dark:bg-white/10 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               onClick={() => setSelectedCompany('bsd')}
             >
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -124,12 +162,11 @@ export default function Home() {
               <p className="text-blue-600 dark:text-blue-400 mb-4">
                 {t.experience.bsd.company} - {t.experience.bsd.period}
               </p>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
                 {t.experience.bsd.description}
               </p>
               <button
-                className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400 
-                         transition-colors duration-200 flex items-center gap-2"
+                className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors duration-200 flex items-center gap-2"
                 onClick={() => setSelectedCompany('bsd')}
               >
                 {t.experience.viewMore}
@@ -143,7 +180,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-white/80 dark:bg-white/10 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               onClick={() => setSelectedCompany('connectit')}
             >
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -152,12 +189,11 @@ export default function Home() {
               <p className="text-blue-600 dark:text-blue-400 mb-4">
                 {t.experience.connectit.company} - {t.experience.connectit.period}
               </p>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
                 {t.experience.connectit.description}
               </p>
               <button
-                className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400 
-                         transition-colors duration-200 flex items-center gap-2"
+                className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors duration-200 flex items-center gap-2"
                 onClick={() => setSelectedCompany('connectit')}
               >
                 {t.experience.viewMore}
@@ -171,8 +207,9 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="w-full py-24 bg-white dark:bg-gray-900 transition-colors duration-300">
-        <div className="container mx-auto px-4">
+      <section id="skills" className="w-full py-32 relative">
+        <div className="absolute inset-0 bg-gray-50/80 dark:bg-black/20" />
+        <div className="container relative mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center text-gray-900 dark:text-white">
             {t.skills.title}
           </h2>
@@ -181,13 +218,19 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects">
-        <ProjectsSection />
+      <section id="projects" className="w-full py-32 relative">
+        <div className="absolute inset-0 bg-gray-100/80 dark:bg-black/30" />
+        <div className="relative">
+          <ProjectsSection />
+        </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact">
-        <ContactSection />
+      <section id="contact" className="w-full py-32 relative">
+        <div className="absolute inset-0 bg-gray-200/50 dark:bg-black/40" />
+        <div className="relative">
+          <ContactSection />
+        </div>
       </section>
 
       {/* Experience Modals */}
