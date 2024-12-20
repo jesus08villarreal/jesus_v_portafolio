@@ -166,12 +166,12 @@ export default function Home() {
               <div className="w-20 h-1 bg-blue-500 mx-auto rounded-full" />
             </div>
             
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-8">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="relative group"
+                className="relative group h-full"
               >
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl opacity-20 group-hover:opacity-30 blur transition duration-300" />
                 <div className="relative h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 border border-gray-200/50 dark:border-white/10">
@@ -188,7 +188,7 @@ export default function Home() {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="relative group"
+                className="relative group h-full"
               >
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl opacity-20 group-hover:opacity-30 blur transition duration-300" />
                 <div className="relative h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 border border-gray-200/50 dark:border-white/10">

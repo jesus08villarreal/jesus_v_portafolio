@@ -17,11 +17,19 @@ export const translations = {
       content: 'Full-stack software developer with experience in front-end and back-end technologies, including HTML, CSS, JavaScript, Vue.js, Python, and PHP. Specialized in SQL database management and efficient deployments with Docker and CI/CD. As a Computer Engineering graduate, I seek to contribute to innovative projects with my analytical approach and problem-solving abilities.',
       technicalExperience: {
         title: "Technical Experience",
-        description: "Full-stack developer with experience in front-end and back-end technologies, including HTML, CSS, JavaScript, Vue.js, Python, and PHP. Specialized in SQL database management and efficient deployments with Docker and CI/CD."
+        description: "Experienced Full-stack developer proficient in modern web technologies. Strong expertise in front-end frameworks like Angular, Vue.js, and React, along with back-end technologies including Python, Node.js, and PHP. Skilled in cloud services (AWS, Azure) and database management (SQL, NoSQL). Expert in TypeScript and cloud architecture, with experience in implementing microservices, RESTful APIs, and real-time applications. Specialized in implementing efficient CI/CD pipelines, containerized solutions with Docker, and maintaining strong security practices. Solid background in database optimization and modern development paradigms."
       },
       professionalApproach: {
         title: "Professional Approach",
-        description: "As a Computer Administrative Engineering graduate, I seek to contribute to innovative projects with my analytical approach and problem-solving abilities, always maintaining best development practices."
+        description: "As a Computer Administrative Engineering graduate, I combine technical expertise with business acumen. Focused on delivering scalable solutions while maintaining clean code practices and comprehensive documentation. Strong communicator with excellent problem-solving abilities and proven experience in project management and team leadership. Adaptable to fast-paced environments and committed to continuous learning, with a successful track record in client collaboration and requirement analysis. Experienced in agile methodologies and promoting knowledge sharing within teams."
+      },
+      technicalSkills: {
+        title: "Technical Skills",
+        description: "Proficient in multiple programming paradigms and modern development practices. Expert in TypeScript, Python, and cloud architecture. Experienced in implementing microservices, RESTful APIs, and real-time applications. Strong background in database optimization and security best practices."
+      },
+      softSkills: {
+        title: "Soft Skills",
+        description: "Strong communicator with excellent problem-solving abilities. Experienced in project management and team leadership. Adaptable to fast-paced environments and committed to continuous learning. Proven track record of successful client collaboration and requirement analysis."
       }
     },
     experience: {
@@ -172,11 +180,19 @@ export const translations = {
       content: 'Desarrollador de software Full-stack con experiencia en tecnologías front-end y back-end, incluyendo HTML, CSS, JavaScript, Vue.js, Python y PHP. Especializado en la gestión de bases de datos SQL y despliegues eficientes con Docker y CI/CD. Como graduado en Ingeniería en Computación Administrativa, busco contribuir a proyectos innovadores con mi enfoque analítico y capacidad de resolución de problemas.',
       technicalExperience: {
         title: "Experiencia Técnica",
-        description: "Desarrollador Full-stack con experiencia en tecnologías front-end y back-end, incluyendo HTML, CSS, JavaScript, Vue.js, Python y PHP. Especializado en la gestión de bases de datos SQL y despliegues eficientes con Docker y CI/CD."
+        description: "Desarrollador Full-stack experimentado en tecnologías web modernas. Amplia experiencia en frameworks front-end como Angular, Vue.js y React, junto con tecnologías back-end incluyendo Python, Node.js y PHP. Competente en servicios cloud (AWS, Azure) y gestión de bases de datos (SQL, NoSQL). Experto en TypeScript y arquitectura cloud, con experiencia en implementación de microservicios, APIs RESTful y aplicaciones en tiempo real. Especializado en implementación de pipelines CI/CD eficientes, soluciones containerizadas con Docker y mantenimiento de sólidas prácticas de seguridad. Sólida experiencia en optimización de bases de datos y paradigmas modernos de desarrollo."
       },
       professionalApproach: {
         title: "Enfoque Profesional",
-        description: "Como graduado en Ingeniería en Computación Administrativa, busco contribuir a proyectos innovadores con mi enfoque analítico y capacidad de resolución de problemas, siempre manteniendo las mejores prácticas de desarrollo."
+        description: "Como graduado en Ingeniería en Computación Administrativa, combino experiencia técnica con visión empresarial. Enfocado en entregar soluciones escalables manteniendo prácticas de código limpio y documentación integral. Comunicador efectivo con excelentes habilidades de resolución de problemas y experiencia comprobada en gestión de proyectos y liderazgo de equipos. Adaptable a entornos dinámicos y comprometido con el aprendizaje continuo, con un historial exitoso en colaboración con clientes y análisis de requerimientos. Experimentado en metodologías ágiles y promoción del intercambio de conocimientos dentro de los equipos."
+      },
+      technicalSkills: {
+        title: "Habilidades Técnicas",
+        description: "Competente en múltiples paradigmas de programación y prácticas modernas de desarrollo. Experto en TypeScript, Python, y arquitectura cloud. Experimentado en implementación de microservicios, APIs RESTful y aplicaciones en tiempo real. Sólida experiencia en optimización de bases de datos y mejores prácticas de seguridad."
+      },
+      softSkills: {
+        title: "Habilidades Blandas",
+        description: "Comunicador efectivo con excelentes habilidades de resolución de problemas. Experimentado en gestión de proyectos y liderazgo de equipos. Adaptable a entornos dinámicos y comprometido con el aprendizaje continuo. Proven track record of successful client collaboration and requirement analysis."
       }
     },
     experience: {
