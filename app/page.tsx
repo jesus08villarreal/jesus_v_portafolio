@@ -9,26 +9,72 @@ import TechSection from './components/TechSection'
 import ProjectsSection from './components/ProjectsSection'
 import ContactSection from './components/ContactSection'
 import ExperienceModal from './components/ExperienceModal'
+import WelcomeModal from './components/WelcomeModal'
 
 export default function Home() {
   const t = useTranslations()
   const [selectedCompany, setSelectedCompany] = useState<'bsd' | 'connectit' | null>(null)
 
+  const nameAnimation = {
+    initial: { opacity: 0, y: 20 },
+    animate: { 
+      opacity: 1, 
+      y: 0,
+      transition: {
+        duration: 1.2,
+        ease: [0.6, -0.05, 0.01, 0.99] // Animación suave y profesional
+      }
+    }
+  }
+
+  const gradientAnimation = {
+    animate: {
+      backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+    },
+    transition: {
+      duration: 5,
+      ease: "linear",
+      repeat: Infinity
+    }
+  }
+
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-black">
+      <WelcomeModal />
       {/* Hero Section */}
       <section id="hero" className="w-full min-h-screen flex items-center justify-center">
         <div className="container mx-auto px-4 py-32 md:py-0">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="flex-1 text-center md:text-left space-y-8">
-              <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-400 dark:to-blue-600"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+              <motion.div
+                className="relative"
+                initial="initial"
+                animate="animate"
+                variants={nameAnimation}
               >
-                Jesús Villarreal
-              </motion.h1>
+                <motion.h1 
+                  className="text-4xl md:text-6xl font-bold relative z-10
+                            bg-clip-text text-transparent bg-gradient-to-r 
+                            from-blue-600 via-purple-600 to-blue-600 
+                            bg-[size:200%]"
+                  animate={gradientAnimation.animate}
+                  transition={gradientAnimation.transition}
+                >
+                  Jesús Villarreal
+                  <motion.div 
+                    className="absolute -inset-2 bg-blue-500/10 rounded-lg blur-xl"
+                    animate={{
+                      opacity: [0.5, 0.8, 0.5],
+                      scale: [1, 1.05, 1],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  />
+                </motion.h1>
+              </motion.div>
               <motion.h2 
                 className="text-2xl md:text-3xl text-gray-700 dark:text-gray-300"
                 initial={{ opacity: 0, y: 20 }}

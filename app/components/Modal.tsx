@@ -49,27 +49,29 @@ export default function Modal({ isOpen, onClose, children, title }: ModalProps) 
             className="relative w-full max-w-2xl max-h-[90vh] m-4 bg-white dark:bg-gray-800 
                      rounded-xl shadow-2xl overflow-hidden"
           >
-            {title && (
-              <div className="sticky top-0 bg-white dark:bg-gray-800 border-b 
+            <div className="sticky top-0 bg-white dark:bg-gray-800 border-b 
                            border-gray-200 dark:border-gray-700 z-10">
-                <div className="px-6 py-4 flex items-center justify-between">
+              <div className="px-6 py-4 flex items-center justify-between">
+                {title ? (
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                     {title}
                   </h3>
-                  <button
-                    onClick={onClose}
-                    className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300
-                             transition-colors duration-200 p-2 rounded-lg 
-                             hover:bg-gray-100 dark:hover:bg-gray-700"
-                  >
-                    <span className="sr-only">Close</span>
-                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                </div>
+                ) : (
+                  <div />
+                )}
+                <button
+                  onClick={onClose}
+                  className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300
+                           transition-colors duration-200 p-2 rounded-lg 
+                           hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  <span className="sr-only">Cerrar</span>
+                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
               </div>
-            )}
+            </div>
             <div className="overflow-y-auto px-6 py-4">
               {children}
             </div>

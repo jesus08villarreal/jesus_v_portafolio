@@ -112,6 +112,30 @@ export default function ExperienceModal({ isOpen, onClose, company, projects = [
               </div>
             </div>
           )}
+
+          {/* Botón de cerrar al final */}
+          <div className="mt-8 flex justify-center">
+            <button
+              onClick={onClose}
+              className="px-6 py-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 
+                       text-gray-700 dark:text-gray-200 rounded-lg transition-colors duration-200 
+                       flex items-center gap-2"
+              aria-label="Cerrar"
+            >
+              <span>Cerrar</span>
+              <svg
+                className="h-5 w-5"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
