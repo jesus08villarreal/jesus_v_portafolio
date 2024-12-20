@@ -98,6 +98,7 @@ export const translations = {
           }
         ]
       },
+      close: 'Close'
     },
     skills: {
       title: 'Technical Skills',
@@ -244,6 +245,7 @@ export const translations = {
           }
         ]
       },
+      close: 'Cerrar'
     },
     skills: {
       title: 'Habilidades Técnicas',
@@ -291,4 +293,4 @@ export const translations = {
       }
     }
   },
-} 
+} as const 
