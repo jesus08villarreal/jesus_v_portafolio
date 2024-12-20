@@ -59,7 +59,6 @@ export default function WelcomeModal() {
     <Modal
       isOpen={isOpen}
       onClose={() => setIsOpen(false)}
-      title="¡Bienvenido/a!"
     >
       <motion.div 
         className="space-y-6 relative max-h-[60vh]"
