@@ -10,10 +10,12 @@ import ProjectsSection from './components/ProjectsSection'
 import ContactSection from './components/ContactSection'
 import ExperienceModal from './components/ExperienceModal'
 import WelcomeModal from './components/WelcomeModal'
+import AlienModal from './components/AlienModal'
 
 export default function Home() {
   const t = useTranslations()
   const [selectedCompany, setSelectedCompany] = useState<'bsd' | 'connectit' | null>(null)
+  const [isAlienModalOpen, setIsAlienModalOpen] = useState(false)
 
   const nameAnimation = {
     initial: { opacity: 0, y: 20 },
@@ -291,6 +293,23 @@ export default function Home() {
         onClose={() => setSelectedCompany(null)}
         company="connectit"
         projects={t.experience.connectit.projects}
+      />
+
+      <footer className="w-full py-8 text-center text-gray-600 dark:text-gray-400">
+        <p>
+          Desarrollado con ❤️ por{' '}
+          <span 
+            className="cursor-pointer hover:text-blue-500 transition-colors"
+            onClick={() => setIsAlienModalOpen(true)}
+          >
+            Jesús Villarreal
+          </span>
+        </p>
+      </footer>
+
+      <AlienModal 
+        isOpen={isAlienModalOpen}
+        onClose={() => setIsAlienModalOpen(false)}
       />
     </main>
   )
