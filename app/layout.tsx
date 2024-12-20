@@ -1,42 +1,54 @@
 import './global.css'
-import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
-import { Navbar } from './components/nav'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import Footer from './components/footer'
-import { baseUrl } from './sitemap'
+import Navigation from './components/Navigation'
+import { ThemeProvider } from './providers/theme-provider'
+import { LanguageProvider } from './providers/language-provider'
 
-export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
-  title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+export const metadata = {
+  title: 'Jesús Villarreal - Full-stack Developer',
+  description: 'Portafolio profesional de Jesús Villarreal, Full-stack Developer con experiencia en tecnologías front-end y back-end.',
+  icons: {
+    icon: [
+      {
+        url: '/favicon.ico',
+        sizes: 'any',
+      },
+      {
+        url: '/icon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    apple: '/apple-touch-icon.png',
   },
-  description: 'This is my portfolio.',
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
-    url: baseUrl,
-    siteName: 'My Portfolio',
-    locale: 'en_US',
+    title: 'Jesús Villarreal - Full-stack Developer',
+    description: 'Portafolio profesional de Jesús Villarreal',
+    url: 'https://jesus-villarreal.vercel.app',
+    siteName: 'Jesús Villarreal',
+    locale: 'es-MX',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Jesús Villarreal - Full-stack Developer',
+    description: 'Portafolio profesional de Jesús Villarreal',
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
 }
-
-const cx = (...classes) => classes.filter(Boolean).join(' ')
 
 export default function RootLayout({
   children,
@@ -44,22 +56,26 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang="en"
-      className={cx(
-        'text-black bg-white dark:text-white dark:bg-black',
-        GeistSans.variable,
-        GeistMono.variable
-      )}
-    >
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
-          <Navbar />
-          {children}
-          <Footer />
-          <Analytics />
-          <SpeedInsights />
-        </main>
+    <html lang="es" className={`${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
+      <body className="antialiased min-h-screen bg-white dark:bg-gray-900 transition-theme">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+          storageKey="theme-preference"
+        >
+          <LanguageProvider>
+            <div className="flex flex-col min-h-screen">
+              <Navigation />
+              <main className="flex-grow">
+                {children}
+              </main>
+              <Analytics />
+              <SpeedInsights />
+            </div>
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

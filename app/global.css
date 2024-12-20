@@ -1,150 +1,98 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 ::selection {
-  background-color: #47a3f3;
-  color: #fefefe;
+  @apply bg-blue-500 text-white;
 }
 
-:root {
-  --sh-class: #2d5e9d;
-  --sh-identifier: #354150;
-  --sh-sign: #8996a3;
-  --sh-string: #007f7a;
-  --sh-keyword: #e02518;
-  --sh-comment: #a19595;
-  --sh-jsxliterals: #6266d1;
-  --sh-property: #e25a1c;
-  --sh-entity: #e25a1c;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --sh-class: #4c97f8;
-    --sh-identifier: white;
-    --sh-keyword: #f47067;
-    --sh-string: #0fa295;
-  }
-  html {
-    color-scheme: dark;
-  }
+/* Smooth theme transitions */
+* {
+  @apply transition-colors duration-200;
 }
 
 html {
-  min-width: 360px;
+  scroll-behavior: smooth;
+  @apply antialiased;
 }
 
-.prose .anchor {
-  @apply absolute invisible no-underline;
-
-  margin-left: -1em;
-  padding-right: 0.5em;
-  width: 80%;
-  max-width: 700px;
-  cursor: pointer;
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.anchor:hover {
-  @apply visible;
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
 }
 
-.prose a {
-  @apply underline transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+.animate-fade-in-delay {
+  animation: fadeIn 0.6s ease-out 0.2s forwards;
+  opacity: 0;
 }
 
-.prose .anchor:after {
-  @apply text-neutral-300 dark:text-neutral-700;
-  content: '#';
+.animate-fade-in-delay-2 {
+  animation: fadeIn 0.6s ease-out 0.4s forwards;
+  opacity: 0;
 }
 
-.prose *:hover > .anchor {
-  @apply visible;
+.animate-fade-in-delay-3 {
+  animation: fadeIn 0.6s ease-out 0.6s forwards;
+  opacity: 0;
 }
 
-.prose pre {
-  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 py-2 px-3 text-sm;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
 }
 
-.prose code {
-  @apply px-1 py-0.5 rounded-lg;
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
 }
 
-.prose pre code {
-  @apply p-0;
-  border: initial;
-  line-height: 1.5;
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
 }
 
-.prose code span {
-  @apply font-medium;
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
 }
 
-.prose img {
-  /* Don't apply styles to next/image */
-  @apply m-0;
+/* Theme transitions */
+.transition-theme {
+  @apply transition-all duration-300 ease-in-out;
 }
 
-.prose p {
-  @apply my-4 text-neutral-800 dark:text-neutral-200;
+/* Focus styles */
+:focus-visible {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2 ring-offset-white dark:ring-offset-gray-900;
 }
 
-.prose h1 {
-  @apply text-4xl font-medium tracking-tight mt-6 mb-2;
+/* Button hover effects */
+.hover-effect {
+  @apply transform transition-all duration-200 hover:scale-105 hover:shadow-lg;
 }
 
-.prose h2 {
-  @apply text-xl font-medium tracking-tight mt-6 mb-2;
+/* Link underline animation */
+.link-underline {
+  @apply relative;
 }
 
-.prose h3 {
-  @apply text-xl font-medium tracking-tight mt-6 mb-2;
+.link-underline::after {
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-200 content-[''];
 }
 
-.prose h4 {
-  @apply text-lg font-medium tracking-tight mt-6 mb-2;
+.link-underline:hover::after {
+  @apply w-full;
 }
 
-.prose strong {
-  @apply font-medium;
-}
-
-.prose ul {
-  @apply list-disc pl-6;
-}
-
-.prose ol {
-  @apply list-decimal pl-6;
-}
-
-.prose > :first-child {
-  /* Override removing top margin, causing layout shift */
-  margin-top: 1.25em !important;
-  margin-bottom: 1.25em !important;
-}
-
-pre::-webkit-scrollbar {
-  display: none;
-}
-
-pre {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-/* Remove Safari input shadow on mobile */
-input[type='text'],
-input[type='email'] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-table {
-  display: block;
-  max-width: fit-content;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.title {
-  text-wrap: balance;
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
 }
