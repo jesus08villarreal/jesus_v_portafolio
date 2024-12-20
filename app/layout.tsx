@@ -63,7 +63,7 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-          storageKey="theme-preference"
+          storageKey="theme"
         >
           <LanguageProvider>
             <div className="flex flex-col min-h-screen">

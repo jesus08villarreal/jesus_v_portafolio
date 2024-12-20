@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useTranslations } from './hooks/useTranslations'
@@ -16,6 +16,22 @@ export default function Home() {
   const t = useTranslations()
   const [selectedCompany, setSelectedCompany] = useState<'bsd' | 'connectit' | null>(null)
   const [isAlienModalOpen, setIsAlienModalOpen] = useState(false)
+
+  useEffect(() => {
+    // Verificar si hay un tema guardado en localStorage
+    const savedTheme = localStorage.getItem('theme-preference');
+    
+    // Si no hay tema guardado, establecer 'dark' como predeterminado
+    if (!savedTheme) {
+      localStorage.setItem('theme-preference', 'dark');
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+    } else {
+      // Si hay un tema guardado, aplicarlo
+      document.documentElement.classList.remove('light', 'dark');
+      document.documentElement.classList.add(savedTheme);
+    }
+  }, []);
 
   const nameAnimation = {
     initial: { opacity: 0, y: 20 },
@@ -297,7 +313,7 @@ export default function Home() {
 
       <footer className="w-full py-8 text-center text-gray-600 dark:text-gray-400">
         <p>
-          Desarrollado con ❤️ por{' '}
+          {t.footer.developedBy}{' '}
           <span 
             className="cursor-pointer hover:text-blue-500 transition-colors"
             onClick={() => setIsAlienModalOpen(true)}

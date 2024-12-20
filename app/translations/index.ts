@@ -132,6 +132,18 @@ export const translations = {
       social: 'Social Media',
       description: 'Feel free to reach out to me through any of these channels. I\'m always open to new opportunities and collaborations.',
     },
+    footer: {
+      developedBy: 'Developed with ❤️ by'
+    },
+    modal: {
+      close: 'Close',
+      alienAlt: 'Dancing Alien',
+      welcome: {
+        title: 'Welcome to my Portfolio',
+        description: 'Hi! I\'m Jesús Villarreal. Explore my work and experience.',
+        button: 'Let\'s Start'
+      }
+    }
   },
   es: {
     nav: {
@@ -266,5 +278,17 @@ export const translations = {
       social: 'Redes Sociales',
       description: 'No dudes en contactarme a través de cualquiera de estos canales. Siempre estoy abierto a nuevas oportunidades y colaboraciones.',
     },
+    footer: {
+      developedBy: 'Desarrollado con ❤️ por'
+    },
+    modal: {
+      close: 'Cerrar',
+      alienAlt: 'Alien Bailando',
+      welcome: {
+        title: 'Bienvenido a mi Portafolio',
+        description: '¡Hola! Soy Jesús Villarreal. Explora mi trabajo y experiencia.',
+        button: 'Comenzar'
+      }
+    }
   },
 } 
