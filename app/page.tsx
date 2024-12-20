@@ -302,13 +302,21 @@ export default function Home() {
         isOpen={selectedCompany === 'bsd'}
         onClose={() => setSelectedCompany(null)}
         company="bsd"
-        projects={t.experience.bsd.projects}
+        projects={t.experience.bsd.projects.map(p => ({
+          ...p,
+          technologies: [...p.technologies],
+          achievements: [...p.achievements]
+        }))}
       />
       <ExperienceModal
         isOpen={selectedCompany === 'connectit'}
         onClose={() => setSelectedCompany(null)}
         company="connectit"
-        projects={t.experience.connectit.projects}
+        projects={t.experience.connectit.projects.map(p => ({
+          ...p,
+          technologies: [...p.technologies],
+          achievements: [...p.achievements]
+        }))}
       />
 
       <footer className="w-full py-8 text-center text-gray-600 dark:text-gray-400">
