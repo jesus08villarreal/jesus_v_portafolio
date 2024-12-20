@@ -15,6 +15,14 @@ export const translations = {
     about: {
       title: 'About Me',
       content: 'Full-stack software developer with experience in front-end and back-end technologies, including HTML, CSS, JavaScript, Vue.js, Python, and PHP. Specialized in SQL database management and efficient deployments with Docker and CI/CD. As a Computer Engineering graduate, I seek to contribute to innovative projects with my analytical approach and problem-solving abilities.',
+      technicalExperience: {
+        title: "Technical Experience",
+        description: "Full-stack developer with experience in front-end and back-end technologies, including HTML, CSS, JavaScript, Vue.js, Python, and PHP. Specialized in SQL database management and efficient deployments with Docker and CI/CD."
+      },
+      professionalApproach: {
+        title: "Professional Approach",
+        description: "As a Computer Administrative Engineering graduate, I seek to contribute to innovative projects with my analytical approach and problem-solving abilities, always maintaining best development practices."
+      }
     },
     experience: {
       title: 'Professional Experience',
@@ -162,6 +170,14 @@ export const translations = {
     about: {
       title: 'Sobre Mí',
       content: 'Desarrollador de software Full-stack con experiencia en tecnologías front-end y back-end, incluyendo HTML, CSS, JavaScript, Vue.js, Python y PHP. Especializado en la gestión de bases de datos SQL y despliegues eficientes con Docker y CI/CD. Como graduado en Ingeniería en Computación Administrativa, busco contribuir a proyectos innovadores con mi enfoque analítico y capacidad de resolución de problemas.',
+      technicalExperience: {
+        title: "Experiencia Técnica",
+        description: "Desarrollador Full-stack con experiencia en tecnologías front-end y back-end, incluyendo HTML, CSS, JavaScript, Vue.js, Python y PHP. Especializado en la gestión de bases de datos SQL y despliegues eficientes con Docker y CI/CD."
+      },
+      professionalApproach: {
+        title: "Enfoque Profesional",
+        description: "Como graduado en Ingeniería en Computación Administrativa, busco contribuir a proyectos innovadores con mi enfoque analítico y capacidad de resolución de problemas, siempre manteniendo las mejores prácticas de desarrollo."
+      }
     },
     experience: {
       title: 'Experiencia Profesional',

@@ -58,13 +58,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
       <body className="antialiased min-h-screen bg-white dark:bg-gray-900 transition-theme">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-          storageKey="theme"
-        >
+        <ThemeProvider>
           <LanguageProvider>
             <div className="flex flex-col min-h-screen">
               <Navigation />

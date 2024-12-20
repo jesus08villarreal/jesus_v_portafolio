@@ -176,10 +176,10 @@ export default function Home() {
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl opacity-20 group-hover:opacity-30 blur transition duration-300" />
                 <div className="relative h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 border border-gray-200/50 dark:border-white/10">
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                    Experiencia Técnica
+                    {t.about.technicalExperience.title}
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Desarrollador Full-stack con experiencia en tecnologías front-end y back-end, incluyendo HTML, CSS, JavaScript, Vue.js, Python y PHP. Especializado en la gestión de bases de datos SQL y despliegues eficientes con Docker y CI/CD.
+                    {t.about.technicalExperience.description}
                   </p>
                 </div>
               </motion.div>
@@ -193,10 +193,10 @@ export default function Home() {
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl opacity-20 group-hover:opacity-30 blur transition duration-300" />
                 <div className="relative h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 border border-gray-200/50 dark:border-white/10">
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                    Enfoque Profesional
+                    {t.about.professionalApproach.title}
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Como graduado en Ingeniería en Computación Administrativa, busco contribuir a proyectos innovadores con mi enfoque analítico y capacidad de resolución de problemas, siempre manteniendo las mejores prácticas de desarrollo.
+                    {t.about.professionalApproach.description}
                   </p>
                 </div>
               </motion.div>
